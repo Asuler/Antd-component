@@ -13,6 +13,8 @@ ChormeBar(未封装)
     如果不调用  this.chromeTab.init(this.el);   会发现tabs叠在一起
     componentDidUpdate 里面，重新刷新了一下tabs的情况，并根据数组里的active选项，手动改变激活
     图标用了svg，不需要的话，可以手动改
+    可以直接yarn add  chrome-tabs
+    我是因为业务需求，要改一下，所以把他的源码拿出来改造，取出chrome-tabs.js 这个npm包就这个js，
 
 DateRangePicker
     日期范围选择器，antd里面有一个DatePicker，DatePicker里面有个RangePicker，足够完成需求了
