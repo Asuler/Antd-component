@@ -1,3 +1,9 @@
+
+// 使用方法-redux中的reducer,深度合并
+// mergeState(state, { payload }) {
+//   return mergeDeep(state, payload);
+//}
+
 function isObject(item) {
   return item && typeof item === 'object' && !Array.isArray(item);
 }
@@ -5,6 +11,7 @@ function isObject(item) {
 function isArray(item) {
   return item && typeof item === 'object' && Array.isArray(item);
 }
+
 function mergeDeep(originalValue, targetValue) {
   if (isArray(originalValue)) {
     return targetValue;
@@ -43,10 +50,8 @@ function mergeDeep(originalValue, targetValue) {
   return originalValueCopy;
 }
 
-export default mergeDeep
-
-
-// 使用方法-redux中的reducer,深度合并
-// mergeState(state, { payload }) {
-//   return mergeDeep(state, payload);
-//}
+export default {
+  isObject,
+  isArray,
+  mergeDeep,
+};
